@@ -1,10 +1,18 @@
 <template>
 
-  <div class="parallax">
-    <header>
+  <div class="wrapper">
+
+    <div class="parallax">
       <img src="@/assets/backback.png" class="parallax-l1">
-      <div class="parallax-l2">Jared Morrison's Portfolio</div>
-    </header>
+      <div class="parallax-l2">
+        <p class="t1">Jared Morrison's Portfolio</p>
+        <div class="scrollDownPrompt">
+          <iframe src="https://giphy.com/embed/mjRKIiDIzryBxbimeq" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          <div>Scroll Down</div>
+        </div>
+      </div>
+    </div>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Secular+One&display=swap" rel="stylesheet">
@@ -27,16 +35,17 @@ body {
   margin: 0;
 }
 
-.parallax {
+.wrapper {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 10px;
 }
 
-header {
+.parallax {
   position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -51,14 +60,39 @@ header {
   width: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: blur(5px);
+  filter: blur(10px);
 }
 
 
 .parallax-l2 {
-  font-size: 7rem;
   color: black;
   font-family: 'Secular One', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.t1 {
+  margin: 0px;
+  font-size: 3.8vw;
+
+}
+
+.scrollDownPrompt {
+  position: relative;
+  font-size: 0.7vw;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.giphy-embed{
+  width: 2vw;
+  height: 2vw;
 }
 
 </style>
