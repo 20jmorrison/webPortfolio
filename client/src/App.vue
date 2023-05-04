@@ -1,5 +1,5 @@
 <template>
-<p>Main Page</p>
+<p>Jared Morrison's Portfolio</p>
 </template>
 
 <script>
