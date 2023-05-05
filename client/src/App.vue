@@ -1,40 +1,51 @@
 <template>
-
   <div class="wrapper">
-
     <header>
-      <img src="@/assets/backback.png" class="parallax-l1">
+      <img src="@/assets/backback.png" class="parallax-l1" />
       <div class="parallax-l2">
         <p class="title">Jared Morrison's Portfolio</p>
         <div class="scrollDownPrompt">
-          <iframe src="https://giphy.com/embed/mjRKIiDIzryBxbimeq" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          <iframe
+            src="https://giphy.com/embed/mjRKIiDIzryBxbimeq"
+            frameBorder="0"
+            class="giphy-embed"
+            allowFullScreen
+          ></iframe>
           <div>Scroll Down</div>
         </div>
       </div>
-      
     </header>
-    <section>
-        whoami? 
+
+    <section class="whoami">
+      <p>whoami?</p>
+      <p class="whoBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam sollicitudin nibh vitae feugiat. Donec auctor lacinia lacus at suscipit. Suspendisse eget sollicitudin lectus. Cras vitae massa orci. Integer faucibus mollis mattis. Curabitur maximus nisl eget viverra elementum. Vestibulum iaculis ante risus, sed commodo nisi tempus eget. Proin nisi nisl, dignissim nec condimentum eu, lacinia quis libero. Proin egestas facilisis eros, eu molestie enim lacinia ac. Morbi pharetra eros lobortis, ornare eros a, luctus felis. Nulla eu elit vitae mi vehicula rutrum sed ac quam. Maecenas eu elit eu lectus pulvinar fringilla ut a enim. Ut blandit sem massa, ut vehicula leo commodo in.</p>
+      
     </section>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Secular+One&display=swap" rel="stylesheet">
-  </div>
+    <section class="projects">
+      <img src="@/assets/gradi.jpg" class="parallax-l1 grad" />
+      <div class="parallax-l2 proj">
+        <p class="title">What can I do?</p>
+      </div>
+    </section>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+  </div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
-  components: {
-  }
-}
+  name: "App",
+  components: {},
+};
 </script>
 
 <style>
-
 body {
   margin: 0;
 }
@@ -58,7 +69,7 @@ header {
 }
 
 .parallax-l1 {
-  transform: translateZ(-10px) scale(2);
+  transform: translateZ(-5px) scale(1.5);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -67,10 +78,9 @@ header {
   filter: blur(10px);
 }
 
-
 .parallax-l2 {
   color: black;
-  font-family: 'Secular One', sans-serif;
+  font-family: "Secular One", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,7 +90,6 @@ header {
 .title {
   margin: 0px;
   font-size: 3.8vw;
-
 }
 
 .scrollDownPrompt {
@@ -99,12 +108,46 @@ header {
   height: 2vw;
 }
 
-section {
-  font-size: 2rem;
+.whoami {
+  font-family: "Secular One", sans-serif;
+  font-size: 3vw;
+  line-height: 7vh;
   padding: 2rem;
   background-color: #333;
   color: white;
+  height: 85vh;
+  padding: 10vh;
+}
+
+.whoBody {
+  font-size: 2vw;
+}
+
+.projects {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 50vh;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.grad {
+  width: 110vw;
   height: 200vh;
+}
+
+.proj {
+  
+  position: sticky;
+  margin-top: -150vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 40px;
 }
 
 </style>
