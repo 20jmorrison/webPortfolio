@@ -2,16 +2,20 @@
 
   <div class="wrapper">
 
-    <div class="parallax">
+    <header>
       <img src="@/assets/backback.png" class="parallax-l1">
       <div class="parallax-l2">
-        <p class="t1">Jared Morrison's Portfolio</p>
+        <p class="title">Jared Morrison's Portfolio</p>
         <div class="scrollDownPrompt">
           <iframe src="https://giphy.com/embed/mjRKIiDIzryBxbimeq" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
           <div>Scroll Down</div>
         </div>
       </div>
-    </div>
+      
+    </header>
+    <section>
+        whoami? 
+    </section>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,15 +41,15 @@ body {
 
 .wrapper {
   height: 100vh;
-  overflow-y: auto;
   overflow-x: hidden;
+  overflow-y: auto;
   perspective: 10px;
 }
 
-.parallax {
+header {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -73,7 +77,7 @@ body {
   align-items: center;
 }
 
-.t1 {
+.title {
   margin: 0px;
   font-size: 3.8vw;
 
@@ -90,9 +94,17 @@ body {
   align-items: center;
 }
 
-.giphy-embed{
+.giphy-embed {
   width: 2vw;
   height: 2vw;
+}
+
+section {
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: #333;
+  color: white;
+  height: 200vh;
 }
 
 </style>
