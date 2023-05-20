@@ -1,16 +1,19 @@
 <template>
   <div class="wrapper">
+    <div class="stickyHeader">
+      <div class="quickLinks">
+        <button class="goTowhoami" @click="scrollTowhoami()">About Me</button>
+        <button class="goToprojects" @click="scrollToprojects()">Projects</button>
+        <button class="downloadResume" @click="downloadResumePDF()">Download Resume PDF</button>
+      </div>
+    </div>
     <header>
       <img src="@/assets/backback.png" class="parallax-l1" />
       <div class="parallax-l2">
         <p class="title">Jared Morrison's Portfolio</p>
         <div class="scrollDownPrompt">
-          <iframe
-            src="https://giphy.com/embed/mjRKIiDIzryBxbimeq"
-            frameBorder="0"
-            class="giphy-embed"
-            allowFullScreen
-          ></iframe>
+          <iframe src="https://giphy.com/embed/mjRKIiDIzryBxbimeq" frameBorder="0" class="giphy-embed"
+            allowFullScreen></iframe>
           <div>Scroll Down</div>
         </div>
       </div>
@@ -18,8 +21,14 @@
 
     <section class="whoami">
       <p>whoami?</p>
-      <p class="whoBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam sollicitudin nibh vitae feugiat. Donec auctor lacinia lacus at suscipit. Suspendisse eget sollicitudin lectus. Cras vitae massa orci. Integer faucibus mollis mattis. Curabitur maximus nisl eget viverra elementum. Vestibulum iaculis ante risus, sed commodo nisi tempus eget. Proin nisi nisl, dignissim nec condimentum eu, lacinia quis libero. Proin egestas facilisis eros, eu molestie enim lacinia ac. Morbi pharetra eros lobortis, ornare eros a, luctus felis. Nulla eu elit vitae mi vehicula rutrum sed ac quam. Maecenas eu elit eu lectus pulvinar fringilla ut a enim. Ut blandit sem massa, ut vehicula leo commodo in.</p>
-      
+      <p class="whoBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam sollicitudin nibh vitae
+        feugiat. Donec auctor lacinia lacus at suscipit. Suspendisse eget sollicitudin lectus. Cras vitae massa orci.
+        Integer faucibus mollis mattis. Curabitur maximus nisl eget viverra elementum. Vestibulum iaculis ante risus, sed
+        commodo nisi tempus eget. Proin nisi nisl, dignissim nec condimentum eu, lacinia quis libero. Proin egestas
+        facilisis eros, eu molestie enim lacinia ac. Morbi pharetra eros lobortis, ornare eros a, luctus felis. Nulla eu
+        elit vitae mi vehicula rutrum sed ac quam. Maecenas eu elit eu lectus pulvinar fringilla ut a enim. Ut blandit sem
+        massa, ut vehicula leo commodo in.</p>
+
     </section>
 
     <section class="projects">
@@ -31,10 +40,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Secular+One&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Secular+One&display=swap"
+      rel="stylesheet" />
   </div>
 </template>
 
@@ -79,6 +86,7 @@ header {
 }
 
 .parallax-l2 {
+  margin-top: -10vh;
   color: black;
   font-family: "Secular One", sans-serif;
   display: flex;
@@ -88,7 +96,7 @@ header {
 }
 
 .title {
-  margin: 0px;
+  margin: 0;
   font-size: 3.8vw;
 }
 
@@ -141,13 +149,32 @@ header {
 }
 
 .proj {
-  
+
   position: sticky;
   margin-top: -150vh;
   position: -webkit-sticky;
-  position: sticky;
   top: 0;
   padding: 40px;
 }
 
+.stickyHeader {
+  position: sticky;
+  position: -webkit-sticky;
+  padding: 10px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.quickLinks {
+  align-self: flex-end;
+}
+
+.goTowhoami, .goToprojects, .downloadResume {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
 </style>
