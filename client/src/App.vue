@@ -20,16 +20,19 @@
       </div>
     </header>
 
-    <section class="whoami">
+    <section class="whoamiBG">
       <p>whoami?</p>
-      <p class="whoBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam sollicitudin nibh vitae
-        feugiat. Donec auctor lacinia lacus at suscipit. Suspendisse eget sollicitudin lectus. Cras vitae massa orci.
-        Integer faucibus mollis mattis. Curabitur maximus nisl eget viverra elementum. Vestibulum iaculis ante risus, sed
-        commodo nisi tempus eget. Proin nisi nisl, dignissim nec condimentum eu, lacinia quis libero. Proin egestas
-        facilisis eros, eu molestie enim lacinia ac. Morbi pharetra eros lobortis, ornare eros a, luctus felis. Nulla eu
-        elit vitae mi vehicula rutrum sed ac quam. Maecenas eu elit eu lectus pulvinar fringilla ut a enim. Ut blandit sem
-        massa, ut vehicula leo commodo in.</p>
+      <div class="whoBody">
+        <p class="myDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam sollicitudin nibh vitae
+          feugiat. Donec auctor lacinia lacus at suscipit. Suspendisse eget sollicitudin lectus. Cras vitae massa orci.
+          Integer faucibus mollis mattis. Curabitur maximus nisl eget viverra elementum. Vestibulum iaculis ante risus, sed
+          commodo nisi tempus eget.
+        </p>
+        <img src="@/assets/me.jpg" class="myImg"/>
 
+      </div>
+
+      
     </section>
 
     <section class="projects">
@@ -146,19 +149,25 @@ header {
   height: 2vw;
 }
 
-.whoami {
+.whoamiBG{
   font-family: "Secular One", sans-serif;
   font-size: 3vw;
   line-height: 7vh;
   padding: 2rem;
   background-color: #333;
   color: white;
-  height: 85vh;
-  padding: 10vh;
+  height: 100vh;
+  padding: 5vh;
 }
 
 .whoBody {
-  font-size: 2vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.myDescription {
+  width: 60%;
+  font-size: 1.5vw;
 }
 
 .projects {
@@ -211,4 +220,11 @@ header {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.myImg {
+  width: 30%;
+  height: auto;
+  margin-left: 5vw;
+}
+
 </style>
