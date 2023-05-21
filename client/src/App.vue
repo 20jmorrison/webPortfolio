@@ -9,7 +9,7 @@
       </div>
     </div>
     <header class="home">
-      <img src="@/assets/backback.png" class="parallax-l1" />
+      <img src="@/assets/backback1.png" class="parallax-l1" />
       <div class="parallax-l2">
         <p class="title">Jared Morrison's Portfolio</p>
         <div class="scrollDownPrompt">
@@ -60,7 +60,7 @@ export default {
       element.scrollIntoView({ behavior: 'smooth' });
     },
     scrollTowhoami() {
-      const element = document.getElementsByClassName('whoami')[0];
+      const element = document.getElementsByClassName('whoamiBG')[0];
       element.scrollIntoView({ behavior: 'smooth' });
     },
     scrollToprojects() {
@@ -111,11 +111,11 @@ header {
 .parallax-l1 {
   transform: translateZ(-5px) scale(1.5);
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 120%;
+  width: 110%;
   object-fit: cover;
   z-index: -1;
-  filter: blur(10px);
+  filter: blur(2px);
 }
 
 .parallax-l2 {
