@@ -2,12 +2,13 @@
   <div class="wrapper">
     <div class="stickyHeader">
       <div class="quickLinks">
+        <button class="goTohome" @click="scrollTohome()">Home</button>
         <button class="goTowhoami" @click="scrollTowhoami()">About Me</button>
         <button class="goToprojects" @click="scrollToprojects()">Projects</button>
         <button class="downloadResume" @click="downloadResumePDF()">Download Resume PDF</button>
       </div>
     </div>
-    <header>
+    <header class="home">
       <img src="@/assets/backback.png" class="parallax-l1" />
       <div class="parallax-l2">
         <p class="title">Jared Morrison's Portfolio</p>
@@ -34,7 +35,7 @@
     <section class="projects">
       <img src="@/assets/gradi.jpg" class="parallax-l1 grad" />
       <div class="parallax-l2 proj">
-        <p class="title">What can I do?</p>
+        <p class="title">Projects</p>
       </div>
     </section>
 
@@ -46,9 +47,38 @@
 </template>
 
 <script>
+import resumePDF from "@/assets/Jared_Morrison_Resume.pdf";
 export default {
   name: "App",
   components: {},
+  methods: {
+    scrollTohome() {
+      const element = document.getElementsByClassName('home')[0];
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+    scrollTowhoami() {
+      const element = document.getElementsByClassName('whoami')[0];
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+    scrollToprojects() {
+      const element = document.getElementsByClassName('projects')[0];
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+    downloadResumePDF() {
+      const link = document.createElement("a");
+      link.href = resumePDF; // Set the href attribute to the file path
+      link.download = "resume.pdf"; // Set the download attribute to the desired file name
+
+      // Append the <a> element to the document body
+      document.body.appendChild(link);
+
+      // Trigger the click event on the <a> element to start the download
+      link.click();
+
+      // Clean up by removing the temporary <a> element
+      document.body.removeChild(link);
+    }
+  }
 };
 </script>
 
@@ -170,7 +200,11 @@ header {
   align-self: flex-end;
 }
 
-.goTowhoami, .goToprojects, .downloadResume {
+.goTohome,
+.goTowhoami,
+.goToprojects,
+.downloadResume {
+  font-family: "Secular One", sans-serif;
   align-self: flex-end;
   background: transparent;
   border: none;
