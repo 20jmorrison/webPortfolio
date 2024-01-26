@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import resumePDF from "@/assets/Jared_Morrison_Resume.pdf";
+import resumePDF from "@/assets/JaredMorrison_Resume.pdf";
 export default {
   name: "App",
   components: {},
