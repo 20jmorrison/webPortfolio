@@ -23,10 +23,13 @@
     <section class="whoamiBG">
       <p>whoami?</p>
       <div class="whoBody">
-        <p class="myDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam sollicitudin nibh vitae
-          feugiat. Donec auctor lacinia lacus at suscipit. Suspendisse eget sollicitudin lectus. Cras vitae massa orci.
-          Integer faucibus mollis mattis. Curabitur maximus nisl eget viverra elementum. Vestibulum iaculis ante risus, sed
-          commodo nisi tempus eget.
+        <p class="myDescription">
+          I’m Jared Morrison, an Embedded Software Engineer with a passion for tackling complex challenges in embedded systems. 
+          I graduated from Southern New Hampshire University with a degree in Computer Science, and I've spent the last 18 months 
+          working on the 3UCubed CubeSat project at the University of New Hampshire, where I developed the instrument and flight software.
+          I’ve gained experience in working with STM32 microcontrollers, and I’m comfortable coding in C, C++, and Python. I thrive on 
+          solving problems and ensuring everything runs smoothly. I love working on projects that require a strong integration of hardware and software, 
+          and I’m always eager to learn and adapt to new challenges.
         </p>
         <img src="@/assets/me.jpg" class="myImg"/>
 
